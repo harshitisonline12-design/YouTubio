@@ -8,7 +8,6 @@ USER root
 RUN apt-get update && \
     apt-get install -y python3 python3-pip && \
     pip3 install --upgrade "yt-dlp[default,curl-cffi]" --break-system-packages
-    rm -rf /var/lib/apt/lists/*
 USER node
 
 # Set the working directory in the container
