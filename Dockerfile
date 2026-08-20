@@ -6,7 +6,7 @@ FROM node:22-slim
 # We switch to root to perform these operations and then switch back to the node user.
 USER root
 RUN apt-get update && \
-    apt-get install -y python3 python3-pip && \
+    apt-get install -y python3 python3-pip ffmpeg && \
     pip3 install --upgrade "yt-dlp[default,curl-cffi]" --break-system-packages
 USER node
 
